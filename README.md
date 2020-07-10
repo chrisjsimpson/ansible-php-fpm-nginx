@@ -1,6 +1,6 @@
 # PHP-FPM + Nginx Ansible
 
-Configure a server with php-fpm and nginx.
+Configure a server with php-fpm and nginx. This saves time from having to set-up a server manually.
 
 It leaves the server in a state where the `/var/www/html` directory is empty
 ready to be populated by a php project, e.g. via a pipeline.
