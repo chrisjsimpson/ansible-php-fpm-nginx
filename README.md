@@ -16,7 +16,10 @@ Details:
 # Setup
 
 Create an instance (e.g. linode vps) copy its ip address
-Update inventory.yaml with the ip address of the target server
+**Note**: This assumes an Ubuntu based image, though any debian based image may work too.
+
+Update inventory.yaml with the ip address of the target server (add multiple ips, one on each line, if you
+need to set-up multiple servers).
 
 Install ansible requirements (roles)
 
