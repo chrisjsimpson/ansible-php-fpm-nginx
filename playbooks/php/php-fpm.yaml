@@ -1,0 +1,19 @@
+---
+- hosts: targets
+  become: true
+  vars_files:
+    - vars/main.yaml
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: true
+    - name: Install libgmp3-dev, sqlite3
+      apt:
+        name:
+          - libgmp3-dev
+          - sqlite3
+          - libsqlite3-dev
+        state: present
+    - import_role:
+        name: geerlingguy.php
