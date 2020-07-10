@@ -6,6 +6,7 @@ It leaves the server in a state where the `/var/www/html` directory is empty
 ready to be populated by a php project, e.g. via a pipeline.
 
 Details:
+
 - Installs php from source, so can easily keep php up to date
   - See var `php_source_version` to build & install another version of php (see playbooks/php/vars/main.yaml)
   - You can override this at install time, using `-e php_source_version=php-7.4.8` flag on `ansible-playbook`
@@ -48,6 +49,7 @@ Are you sure you want to continue connecting (yes/no)? yes
 
 # Run
 Run the playbooks
+
 - Installs php with php-fpm 
 - Installs nginx with default site using php-fpm's engine
 
