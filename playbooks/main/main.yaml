@@ -1,0 +1,13 @@
+---
+- name: Run all playbooks
+  hosts: targets
+  tasks:
+  - name: Install required packages
+    apt:
+      pkg:
+        - curl
+        - git
+
+- import_playbook: ../nginx/nginx.yaml
+- import_playbook: ../mysql/mysql.yaml
+- import_playbook: ../php/php-fpm.yaml

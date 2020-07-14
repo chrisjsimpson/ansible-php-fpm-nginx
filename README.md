@@ -60,6 +60,9 @@ Run the playbooks
 ansible-playbook -i inventory.ini playbooks/nginx/nginx.yaml;
 ansible-playbook -i inventory.ini playbooks/php-fpm.yaml;
 ansible-playbook -i inventory.ini playbooks/mysql/mysql.yaml; # see configuration notes
+
+# Or, run all playbooks in one go:
+ansible-playbook -i inventory.ini playbooks/main/main.yaml
 ```
 
 ## Configuration
