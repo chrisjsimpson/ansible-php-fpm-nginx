@@ -57,6 +57,38 @@ Run the playbooks
 - Installs nginx with default site using php-fpm's engine
 
 ```
-ansible-playbook -i inventory.ini playbooks/php-fpm.yaml; 
 ansible-playbook -i inventory.ini playbooks/nginx/nginx.yaml;
+ansible-playbook -i inventory.ini playbooks/php-fpm.yaml;
+ansible-playbook -i inventory.ini playbooks/mysql/mysql.yaml; # see configuration notes
+```
+
+## Configuration
+
+Each playbook has a `vars/` directory for config. 
+
+### Mysql setting database name and password
+Rather than hard-code passwords in the repo (see `playbooks/mysql/vars/main.yam` for default
+user and database created), you can specify the database(s) and user(s) to be created at
+the command line for example:
+
+Ensure mysql has a database created called `test_db` with a user will all permissions
+to that database with the username `test_user` and password `password`
+```
+ansible-playbook -i inventory.ini playbooks/mysql/mysql.yaml --extra-vars='{
+  "mysql_databases": [
+    {
+      "name": "test_db",
+      "encoding": "utf8",
+      "collation": "utf8_general_ci"
+    }
+  ],
+  "mysql_users": [
+    {
+      "name": "test_user",
+      "host": "%",
+      "password": "password",
+      "priv": "test_db.*:ALL"
+    }
+  ]
+}'
 ```

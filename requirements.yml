@@ -3,3 +3,5 @@
   version: "4.3.1"
 - name: nginxinc.nginx
   version: "0.14.0"
+- name: geerlingguy.mysql
+  version: "3.1.0"
