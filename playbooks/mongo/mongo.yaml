@@ -1,0 +1,30 @@
+---
+- name: Install mongodb
+  hosts: targets
+  tasks:
+  - name: add mongo GPG key into apt
+    apt_key:
+      url: "https://www.mongodb.org/static/pgp/server-4.2.asc"
+      state: present
+    tags:
+      - mongo
+
+  - name: Add sources list file for MongoDB (ubuntu 18.04 (Bionic))
+    apt_repository:
+      repo: deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse
+      update_cache: true
+      state: present
+
+  - name: install mongodb
+    apt:
+      pkg: "{{item}}"
+    with_items:
+      - mongodb-org
+    tags:
+      - mongo
+  - name: Start mongodb service
+    systemd:
+      name: mongod
+      daemon_reload: true
+      enabled: true  # Enable on reboot
+      state: started

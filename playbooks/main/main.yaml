@@ -11,3 +11,4 @@
 - import_playbook: ../nginx/nginx.yaml
 - import_playbook: ../mysql/mysql.yaml
 - import_playbook: ../php/php-fpm.yaml
+- import_playbook: ../mongo/mongo.yaml
