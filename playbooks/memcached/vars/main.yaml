@@ -1,0 +1,3 @@
+# Uses default memcahed options
+# To see what they are go to https://galaxy.ansible.com/geerlingguy/memcached
+# and click "Read Me"

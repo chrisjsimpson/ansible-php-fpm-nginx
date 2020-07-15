@@ -13,3 +13,4 @@
 - import_playbook: ../php/php-fpm.yaml
 - import_playbook: ../mongo/mongo.yaml
 - import_playbook: ../beanstalkd/beanstalkd.yaml
+- import_playbook: ../memcached/memcached.yaml
