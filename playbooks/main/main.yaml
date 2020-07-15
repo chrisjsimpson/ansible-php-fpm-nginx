@@ -7,6 +7,13 @@
       pkg:
         - curl
         - git
+  - include_role:
+      name: geerlingguy.pip
+  - name: Make sure pymysql is present
+    become: true
+    pip:
+      name: pymysql
+      state: present
 
 - import_playbook: ../nginx/nginx.yaml
 - import_playbook: ../mysql/mysql.yaml
