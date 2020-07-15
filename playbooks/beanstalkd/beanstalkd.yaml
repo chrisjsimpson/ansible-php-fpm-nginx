@@ -1,0 +1,8 @@
+---
+- hosts: targets
+  become: true
+  vars_files:
+    - vars/main.yaml
+  tasks:
+    - import_role:
+        name: manala.beanstalkd
