@@ -9,3 +9,5 @@
   version: "2.0.1"
 - name: geerlingguy.redis
   version: "1.6.0"
+- name: geerlingguy.php-redis
+  version: "3.2.1"

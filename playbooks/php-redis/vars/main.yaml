@@ -1,0 +1,5 @@
+---
+php_redis_install_from_source: true
+php_redis_source_version: "5.3.1"
+php_redis_source_clone_dir: "~/phpredis"
+php_redis_source_configure_command: "./configure"

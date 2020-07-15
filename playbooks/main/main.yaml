@@ -14,3 +14,4 @@
 - import_playbook: ../mongo/mongo.yaml
 - import_playbook: ../beanstalkd/beanstalkd.yaml
 - import_playbook: ../redis/redis.yaml
+- import_playbook: ../php-redis/php-redis.yaml

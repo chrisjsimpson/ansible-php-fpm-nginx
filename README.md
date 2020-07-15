@@ -63,6 +63,7 @@ ansible-playbook -i inventory.ini playbooks/mysql/mysql.yaml; # see configuratio
 ansible-playbook -i inventory.ini playbooks/mongo/mongo.yaml
 ansible-playbook -i inventory.ini playbooks/beanstalkd/beanstalkd.yaml
 ansible-playbook -i inventory.ini playbooks/redis/redis.yaml
+ansible-playbook -i inventory.ini playbooks/php-redis/php-redis.yaml
 
 # Or, run all playbooks in one go:
 ansible-playbook -i inventory.ini playbooks/main/main.yaml

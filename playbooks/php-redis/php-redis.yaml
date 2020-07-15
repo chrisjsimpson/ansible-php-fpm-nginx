@@ -1,0 +1,7 @@
+---
+- hosts: targets
+  vars_files:
+    - ../php/vars/main.yaml #  Php module vars (php-redis depends on geerlingguy.php)
+    - vars/main.yaml
+  roles:
+    - {role: geerlingguy.php-redis}
