@@ -17,3 +17,5 @@
         state: present
     - import_role:
         name: geerlingguy.php
+    - import_role:
+        name: geerlingguy.composer
