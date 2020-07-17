@@ -15,6 +15,8 @@
           - sqlite3
           - libsqlite3-dev
           - libonig-dev  # For mbstring
+          - libzip-dev  # For zip extension
+          - unzip  # For faster unzipping with composer
         state: present
     - import_role:
         name: geerlingguy.php
