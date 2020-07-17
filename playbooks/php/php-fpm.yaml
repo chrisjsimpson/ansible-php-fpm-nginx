@@ -14,6 +14,7 @@
           - libgmp3-dev
           - sqlite3
           - libsqlite3-dev
+          - libonig-dev  # For mbstring
         state: present
     - import_role:
         name: geerlingguy.php
