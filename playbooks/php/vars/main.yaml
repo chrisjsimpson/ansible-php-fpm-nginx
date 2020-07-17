@@ -6,7 +6,7 @@ php_source_clone_depth: 1
 php_source_install_path: "/usr/local"
 php_source_make_command: "make"
 php_source_configure_command: >
-  ./configure --enable-fpm
+  ./configure --enable-fpm --with-openssl
 php_enable_php_fpm: true
 php_memory_limit: "128M"
 php_max_execution_time: "90"
