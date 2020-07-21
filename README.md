@@ -133,5 +133,5 @@ Place the .env file in the `/var/www/html` directory
 ### Set ownership of the repo to www-data
 
 1. cd /var/www/html
-2. chown -R chown -R www-data ./
+2. chown -R www-data ./
 3. Restart php-fpm `systemctl restart php-fpm.service`
