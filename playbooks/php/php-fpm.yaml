@@ -20,5 +20,9 @@
         state: present
     - import_role:
         name: geerlingguy.php
+    - name: Place php.ini
+      template:
+        src: templates/php.ini
+        dest: /usr/local/lib/php.ini
     - import_role:
         name: geerlingguy.composer

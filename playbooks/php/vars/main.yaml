@@ -1,7 +1,7 @@
 ---
 php_source_clone_dir: "~/php-src"
 php_install_from_source: true
-php_source_version: "php-7.4.8"
+php_source_version: "php-7.2.32"
 php_source_clone_depth: 1
 php_source_install_path: "/usr/local"
 php_source_make_command: "make"
