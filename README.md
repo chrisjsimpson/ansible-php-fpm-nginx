@@ -1,4 +1,4 @@
-# PHP-FPM + Nginx Ansible
+# PHP-FPM + Nginx + Mongo + Redis Ansible Playbooks
 
 Configure a server with php-fpm and nginx. This saves time from having to set-up a server manually.
 
@@ -11,7 +11,9 @@ Details:
   - See var `php_source_version` to build & install another version of php (see playbooks/php/vars/main.yaml)
   - You can override this at install time, using `-e php_source_version=php-7.4.8` flag on `ansible-playbook`
 - Nginx is configured to point to fpm running on 127.0.0.1:900
-- The site directory is /var/www/html
+- The site directory is /var/www/html, with the site root set to /var/www/html/public
+- Mongo is installed and listening on localhost
+- Redis is installed and listening on localhost
 
 # Setup
 
