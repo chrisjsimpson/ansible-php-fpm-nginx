@@ -123,6 +123,7 @@ If you can't clone: Generate a key (`ssh-keygen`) and add `cat  ~/.ssh/id_rsa.pu
 ### Run composer install 
 
 1. `cd /var/www/html`
+2. `mkdir bootstrap/cache` (if laravel and directory not present)
 2. `composer install`
 
 ### Env file 
