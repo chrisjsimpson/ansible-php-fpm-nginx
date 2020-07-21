@@ -99,3 +99,36 @@ ansible-playbook -i inventory.ini playbooks/mysql/mysql.yaml --extra-vars='{
   ]
 }'
 ```
+
+## Manual steps :( 
+
+Summary
+*Note* Some of these steps should/coud be handles by a pipeline
+
+- Clone the php repo (e.g. a Laravel repo)
+- Run composer install (yes, as root for now)
+- Copy .env file over
+- Generate or set application get (Laravel only e.g. `php artisan key:generate`)
+- Set ownership to www-data (because php-fpm is running as the `www-data` user)
+
+### Clone repo
+
+Clone the php repo in the empty html folder: /var/www/html
+
+1. `git clone <repo> /var/www/html` 
+If you can't clone: Generate a key (`ssh-keygen`) and add `cat  ~/.ssh/id_rsa.pub` to your repo as an allowed key
+
+### Run composer install 
+
+1. `cd /var/www/html`
+2. `composer install`
+
+### Env file 
+
+Place the .env file in the `/var/www/html` directory 
+
+### Set ownership of the repo to www-data
+
+1. cd /var/www/html
+2. chown -R chown -R www-data ./
+3. Restart php-fpm `systemctl restart php-fpm.service`
